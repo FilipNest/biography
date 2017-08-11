@@ -13,7 +13,9 @@ const express = require('express'),
     sendmail = require('sendmail')(),
     tokens = {};
 
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 
 app.use(express.static('static'));
 
