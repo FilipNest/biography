@@ -39,7 +39,7 @@
         {{#each extra}}
         <label for="{{@key}}">{{@key}}</label>
         <br />
-        <textarea name="{{@key}}">{{lookup ../existing/extra @key}}</textarea> 
+        <textarea maxlength="{{this}}" name="{{@key}}">{{lookup ../existing/extra @key}}</textarea> 
         
         {{/each}}
 

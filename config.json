@@ -2,10 +2,7 @@
     "port": 80,
     "bios": [16, 100, 500],
     "extra": {
-        "interests": {
-            "count": 16,
-            "description": "Your interests please"
-        }
+        "interests": 16
     },
     "baseURL": "http://localhost",
     "fromEmail": "mail@filipnest.com"
