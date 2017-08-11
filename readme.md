@@ -6,11 +6,11 @@ Just a doodle of 100% someone else's idea to see how small and quick to build it
 
 ## What it is
 
-* An user page for every email account with some form fields (verified via a link sent to an email to save having to do user accounts).
+* An user page for every email account with some form fields for bio lenghts and extra fields customisable in a config file (verified via a link sent to an email to save having to do user accounts).
 * Simple REST API for fetching values from profiles including specifying the maximum biography length you want.
 * No client side JavaScript, no CSS. Just HTML, some basic form templates and a Node.js server.
 
-# What you can do with it?
+## What you can do with it?
 
 * Fork it? Improve it? Ignore it? The idea is not mine (see above), I just doodled it in code for fun after thinking about how to make it after the tweet.
 
