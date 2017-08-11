@@ -19,11 +19,11 @@ Just a doodle of 100% someone else's idea to see how small and quick to build it
 * git clone/download
 * npm install
 * edit `config.json` file with the following settings (example below):
- * port: Port the server runs on
- * bios: An array of different biography character counts
- * extra: An object of any extra fields you want to collect with a character count 
- * baseUrl: The URL the server will run on. Used in email verification.
- * fromEmail: Who emails will be from
+ - port: Port the server runs on
+ - bios: An array of different biography character counts
+ - extra: An object of any extra fields you want to collect with a character count 
+ - baseUrl: The URL the server will run on. Used in email verification.
+ - fromEmail: Who emails will be from
 
  ```JSON
  
@@ -39,7 +39,7 @@ Just a doodle of 100% someone else's idea to see how small and quick to build it
  
  ```
  
- * node index.js
+* node index.js
  
 ## REST API
 
