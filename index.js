@@ -183,7 +183,7 @@ app.post("/:email", function (req, res) {
             html: "<a href=" + tokenLink + ">" + tokenLink + "</a>",
         });
 
-        res.send("An email has been sent to you with a verification link. This will probably go to your spam folder or be destroyed so here's a little clickable url as this is just a demo so it's harmless: " + "<a href=" + tokenLink + ">" + tokenLink + "</a>");
+        res.send("An email has been sent to you with a verification link. This will probably go to your spam folder or be destroyed before entry if you use something like gmail. So here's a little clickable url as this is just a demo so it's harmless: " + "<a href=" + tokenLink + ">" + tokenLink + "</a>");
 
     });
 
