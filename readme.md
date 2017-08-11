@@ -51,5 +51,5 @@ That's it.
  
 ## Demo site
  
-An instance is running on `biography.filipnest.com` but that's just for testing. There'll probably be bugs.
+An instance is running on http://biography.filipnest.com but that's just for testing. This is not something you should use in this state. It's a doodle.
  
