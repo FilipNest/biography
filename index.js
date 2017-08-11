@@ -131,7 +131,7 @@ app.post("/:email", function (req, res) {
 
 
         sendmail({
-            from: config.baseEmail,
+            from: config.fromEmail,
             to: req.params.email,
             subject: 'Biography verifcation',
             html: "<a href=" + tokenLink + ">" + tokenLink + "</a>",

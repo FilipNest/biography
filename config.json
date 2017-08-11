@@ -7,6 +7,6 @@
             "description": "Your interests please"
         }
     },
-    "baseUrl": "http://localhost",
-    "baseEmail": "mail@filipnest.com"
+    "baseURL": "http://localhost",
+    "fromEmail": "mail@filipnest.com"
 }
