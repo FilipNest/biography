@@ -1,4 +1,4 @@
-# Biography service demo
+# Biography API service demo
 
 Just a doodle of 100% someone else's idea to see how small and quick to build it could be following a Tweet by Jina Anne:
 
@@ -10,9 +10,9 @@ Just a doodle of 100% someone else's idea to see how small and quick to build it
 * Simple REST API for fetching values from profiles including specifying the maximum biography length you want.
 * No client side JavaScript, no CSS. Just HTML, some basic form templates and a Node.js server.
 
-# What you can do with it if you like the idea
+# What you can do with it?
 
-* Fork it? Ignore it? The idea is not mine (see above), I just doodled it in code for fun after thinking "that'd be easy to make".
+* Fork it? Improve it? Ignore it? The idea is not mine (see above), I just doodled it in code for fun after thinking about how to make it after the tweet.
 
 ## Deploy
 
@@ -51,5 +51,5 @@ That's it.
  
 ## Demo site
  
-An instance is running on biography.filipnest.com but that was just for testing.
+An instance is running on `biography.filipnest.com` but that's just for testing. There'll probably be bugs.
  
