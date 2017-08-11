@@ -39,7 +39,7 @@ Just a doodle of 100% someone else's idea to see how small and quick to build it
  
  ```
  
-* node index.js
+* `node index.js`
  
 ## REST API
 
