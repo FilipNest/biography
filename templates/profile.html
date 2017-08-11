@@ -1,0 +1,60 @@
+<h1>Profile for {{email}}</h1>
+
+{{#unless existing}}
+
+<p>No profile exists for {{email}}. Create one (you'll be asked to verify via email).</p>
+
+{{/unless}}
+
+<form method="post">
+
+    <fieldset {{disabled}}>
+        <legend>Basic information</legend>
+
+        <label for="name">Name</label>
+        <input type="text" name="name" value="{{existing.name}}"/>
+
+    </fieldset>
+
+    <fieldset {{disabled}}>
+        <legend>Biographies</legend>
+
+        {{#each bios}}
+
+        <label for="bio{{this}}">{{this}} characters</label>
+
+        <br />
+
+        <textarea name="bio{{this}}" maxlength="{{this}}">{{lookup ../existing/bios @index}}</textarea>
+
+        <br /> {{/each}}
+
+    </fieldset>
+
+    {{#if extra}}
+
+    <fieldset {{disabled}}>
+        <legend>Extra fields</legend>
+
+        {{#each extra}}
+        <label for="{{@key}}">{{@key}}</label>
+        <br />
+        <textarea name="{{@key}}">{{lookup ../existing/extra @key}}</textarea> 
+        
+        {{/each}}
+
+    </fieldset>
+
+    {{/if}}
+    
+    {{#if edit}}
+
+    <button type="submit">Save</button>
+    
+    {{else}}
+    
+    <a href="/{{email}}/?edit=true">Owner of {{email}}? Edit this profile.</a>
+    
+    {{/if}}
+
+</form>
