@@ -74,6 +74,8 @@ app.get("/:email", function (req, res) {
 
 app.get("/", function (req, res) {
 
+    req.query.email = decodeURIComponent(req.query.email);
+
     if (req.query.auth) {
 
         if (tokens[req.query.email] && tokens[req.query.email].token === req.query.token) {
@@ -157,7 +159,7 @@ app.post("/:email", function (req, res) {
 
         }, 100000);
 
-        var tokenLink = config.baseURL + "?auth=true&email=" + req.params.email + "&token=" + token;
+        var tokenLink = config.baseURL + "?auth=true&email=" + encodeURIComponent(req.params.email) + "&token=" + token;
 
 
         sendmail({
