@@ -6,13 +6,13 @@ Just a doodle of 100% someone else's idea to see how small and quick to build it
 
 ## What it is
 
-* An user page for every email account with some form fields for bio lenghts and extra fields customisable in a config file (verified via a link sent to an email to save having to do user accounts).
-* Simple REST API for fetching values from profiles including specifying the maximum biography length you want.
+* An user page for every email account with some form fields for bio lengths and extra fields, customisable in a config file (verified via a link with expiring token sent to an email to save having to do user accounts).
+* Simple JSON REST API for fetching values from profiles including specifying the maximum biography length you want.
 * No client side JavaScript, no CSS. Just HTML, some basic form templates and a Node.js server.
 
 ## What you can do with it?
 
-* Fork it? Improve it? Ignore it? The idea is not mine (see above), I just doodled it in code for fun after thinking about how to make it after the tweet.
+* Fork it? Improve it? Ignore it? The idea is not mine (see above), I just doodled it in code for fun after thinking about how to make it after I saw the tweet.
 
 ## Deploy
 
@@ -23,7 +23,7 @@ Just a doodle of 100% someone else's idea to see how small and quick to build it
   * bios: An array of different biography character counts
   * extra: An object of any extra fields you want to collect with a character count 
   * baseUrl: The URL the server will run on. Used in email verification.
-  * fromEmail: Who emails will be from
+  * fromEmail: Who emails will be from (these get sent via the server's `sendmail` command)
 
  ```JSON
  
@@ -34,7 +34,7 @@ Just a doodle of 100% someone else's idea to see how small and quick to build it
         "interests": 16
     },
     "baseURL": "http://localhost",
-    "fromEmail": "mail@filipnest.com"
+    "fromEmail": "myemail@email.com"
 }
  
  ```
@@ -43,7 +43,7 @@ Just a doodle of 100% someone else's idea to see how small and quick to build it
  
 ## REST API
 
-* Access a url at `/myemail@email.com?json` to get a JSON feed.
+* Access a url at `/myemail@email.com?json` to get a JSON feed. Without the JSON parameter is the normal edit/view profile screen.
 * You'll get back a biography JSON object with a `name`, `bios` array, and `extras` object for the extra fields. Plus an `email` field for reference.
 * Want a biography at a certain length? Pass in a `biolength` parameter with a number and you'll get an extra `biography` parameter with the right one. If nothing is short enough the shortest match is trimmed.
 
