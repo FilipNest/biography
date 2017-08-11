@@ -45,7 +45,7 @@ Just a doodle of 100% someone else's idea to see how small and quick to build it
 
 * Access a url at `/myemail@email.com?json` to get a JSON feed.
 * You'll get back a biography JSON object with a `name`, `bios` array, and `extras` object for the extra fields. Plus an `email` field for reference.
-* Want a biography at a certain length, just pass in a biolength parameter with a number and you'll get an extra `biography` parameter with the right one.
+* Want a biography at a certain length, just pass in a biolength parameter with a number and you'll get an extra `biography` parameter with the right one. If nothing is short enough the shortest match is trimmed.
 
 That's it.
  
