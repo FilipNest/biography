@@ -25,18 +25,48 @@ app.get("/:email", function (req, res) {
         email: req.params.email
     }, function (err, doc) {
 
-        fs.readFile(__dirname + "/templates/" + "profile.html", "utf8", function (err, template) {
+        // Check if a REST API call
 
-            res.send(Handlebars.compile(template)({
-                existing: doc,
-                email: req.params.email,
-                bios: config.bios,
-                extra: config.extra,
-                edit: !doc || req.query.edit ? true : undefined,
-                disabled: !doc || req.query.edit ? undefined : "disabled"
-            }));
+        if ("json" in req.query) {
 
-        });
+            delete doc._id;
+
+            if ("biolength" in req.query) {
+
+                doc.bio = doc.bios.filter(bio => {
+
+                    return bio > req.query.biolength;
+
+                })[0];
+
+            }
+
+            if (doc) {
+
+                res.json(doc);
+
+            } else {
+
+                res.status(404).json({});
+
+            }
+
+        } else {
+
+            fs.readFile(__dirname + "/templates/" + "profile.html", "utf8", function (err, template) {
+
+                res.send(Handlebars.compile(template)({
+                    existing: doc,
+                    email: req.params.email,
+                    bios: config.bios,
+                    extra: config.extra,
+                    edit: !doc || req.query.edit ? true : undefined,
+                    disabled: !doc || req.query.edit ? undefined : "disabled"
+                }));
+
+            });
+
+        }
 
     });
 
