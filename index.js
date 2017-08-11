@@ -127,7 +127,7 @@ app.post("/:email", function (req, res) {
 
         }, 100000);
 
-        var tokenLink = config.baseUrl + "?auth=true&email=" + req.params.email + "&token=" + token;
+        var tokenLink = config.baseURL + "?auth=true&email=" + req.params.email + "&token=" + token;
 
 
         sendmail({
