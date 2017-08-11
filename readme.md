@@ -16,8 +16,8 @@ Just a doodle of 100% someone else's idea to see how small and quick to build it
 
 ## Deploy
 
-* git clone/download
-* npm install
+* `git clone https://github.com/FilipNest/biography`
+* `npm install` in its directory to get dependencies (kept small, could probably be even smaller)
 * edit `config.json` file with the following settings (example below):
   * port: Port the server runs on
   * bios: An array of different biography character counts
