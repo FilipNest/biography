@@ -33,11 +33,21 @@ app.get("/:email", function (req, res) {
 
             if ("biolength" in req.query) {
 
-                doc.bio = doc.bios.filter(bio => {
+                var accepted = doc.bios.filter(bio => {
 
-                    return bio > req.query.biolength;
+                    return bio.length < req.query.biolength;
 
-                })[0];
+                });
+
+                if (!accepted.length) {
+
+                    doc.biography = doc.bios[0].substring(0, req.query.biolength);
+
+                } else {
+
+                    doc.biography = accepted[accepted.length - 1];
+
+                }
 
             }
 
