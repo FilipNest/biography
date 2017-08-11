@@ -74,7 +74,11 @@ app.get("/:email", function (req, res) {
 
 app.get("/", function (req, res) {
 
-    req.query.email = decodeURIComponent(req.query.email);
+    if (req.query.email) {
+
+        req.query.email = decodeURIComponent(req.query.email);
+
+    }
 
     if (req.query.auth) {
 
